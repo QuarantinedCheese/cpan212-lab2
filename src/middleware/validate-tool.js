@@ -22,9 +22,23 @@ export function validateTool(req, res, next) {
   }
 
   // TODO (you): STEP 4. category must be one of CATEGORIES.
+  if (!CATEGORIES.includes(body.category)) {
+    errors.category = 'category must be one of: power, hand, garden, cleaning';
+  }
   // TODO (you): STEP 4. condition must be one of CONDITIONS.
+  if (!CONDITIONS.includes(body.___)) {
+    errors.condition = 'condition must be one of: new, good, worn';
+  }
   // TODO (you): STEP 4. available must be true or false.
+  if (typeof body.available !== '___') {
+    errors.available = 'available must be true or false';
+  }
   // TODO (you): STEP 4. maxLoanDays must be a whole number from 1 to 14.
+  if (!Number.isInteger(body.maxLoanDays) || body.maxLoanDays < ___ || body.maxLoanDays > ___) {
+    errors.maxLoanDays = 'maxLoanDays must be a whole number from 1 to 14';
+  }
+
+
 
   if (Object.keys(errors).length > 0) {
     return res.status(400).json({ error: { message: 'Validation failed', details: errors } });
