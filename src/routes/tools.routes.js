@@ -15,8 +15,8 @@ toolsRouter.get('/', (req, res) => {
     return res.json({ data: tools });
   }
 
-  if (!CATEGORIES.includes(___)) {
-    return res.status(___).json({
+  if (!CATEGORIES.includes(category)) {
+    return res.status(400).json({
       error: {
         message: 'Invalid query',
         details: { category: 'category must be one of: power, hand, garden, cleaning' },
@@ -24,7 +24,7 @@ toolsRouter.get('/', (req, res) => {
     });
   }
 
-  const matching = tools.filter((tool) => tool.category === ___);
+  const matching = tools.filter((tool) => tool.category === category);
   res.json({ data: matching });
 });
 
