@@ -26,15 +26,15 @@ export function validateTool(req, res, next) {
     errors.category = 'category must be one of: power, hand, garden, cleaning';
   }
   // TODO (you): STEP 4. condition must be one of CONDITIONS.
-  if (!CONDITIONS.includes(body.___)) {
+  if (!CONDITIONS.includes(body.condition)) {
     errors.condition = 'condition must be one of: new, good, worn';
   }
   // TODO (you): STEP 4. available must be true or false.
-  if (typeof body.available !== '___') {
+  if (typeof body.available !== 'boolean') {
     errors.available = 'available must be true or false';
   }
   // TODO (you): STEP 4. maxLoanDays must be a whole number from 1 to 14.
-  if (!Number.isInteger(body.maxLoanDays) || body.maxLoanDays < ___ || body.maxLoanDays > ___) {
+  if (!Number.isInteger(body.maxLoanDays) || body.maxLoanDays < 0 || body.maxLoanDays > 15) {
     errors.maxLoanDays = 'maxLoanDays must be a whole number from 1 to 14';
   }
 
