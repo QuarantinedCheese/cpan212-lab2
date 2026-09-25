@@ -28,10 +28,23 @@ toolsRouter.get('/', (req, res) => {
   res.json({ data: matching });
 });
 
+
 // TODO (you): STEP 3. GET /api/tools/:id sends one tool.
+toolsRouter.get('/:id', (req, res) => {
+  const tool = tools.find((tool) => tool.id === req.params.___);
+
+  if (!tool) {
+    return res.status(___).json({ error: { message: 'Tool not found' } });
+  }
+
+  res.json({ data: ___ });
+});
+
 
 // TODO (you): STEP 5. POST /api/tools adds a tool.
 
+
 // TODO (you): STEP 6. PUT /api/tools/:id changes a tool.
+
 
 // TODO (you): STEP 7. DELETE /api/tools/:id removes a tool.
