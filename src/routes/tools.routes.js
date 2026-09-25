@@ -31,13 +31,13 @@ toolsRouter.get('/', (req, res) => {
 
 // TODO (you): STEP 3. GET /api/tools/:id sends one tool.
 toolsRouter.get('/:id', (req, res) => {
-  const tool = tools.find((tool) => tool.id === req.params.___);
+  const tool = tools.find((tool) => tool.id === req.params.id);
 
   if (!tool) {
-    return res.status(___).json({ error: { message: 'Tool not found' } });
+    return res.status(404).json({ error: { message: 'Tool not found' } });
   }
 
-  res.json({ data: ___ });
+  res.json({ data: tool });
 });
 
 
