@@ -1,6 +1,6 @@
 # Tool Library API
 
-<!-- Replace this line with one or two sentences about the project in your own words. -->
+This project handles the data for a small tool library. It keeps track of what tools exist, whether they are available, and allows the user to manipulate entries as needed.
 
 Live: <!-- your Render address, for example https://cpan212-lab2-jane-doe.onrender.com/api/tools -->
 
@@ -34,4 +34,4 @@ This tries every route and prints which checks pass.
 
 ## AI use
 
-<!-- List each AI tool you used and what you used it for, or write "No AI tools used." -->
+No AI tools used.
