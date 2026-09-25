@@ -57,7 +57,7 @@ toolsRouter.put('/:id', validateTool, (req, res) => {
     return res.status(404).json({ error: { message: 'Tool not found' } });
   }
 
-  Object.assign(tool, ___);
+  Object.assign(tool, req.body);
   res.json({ data: tool });
 });
 
