@@ -66,10 +66,10 @@ toolsRouter.put('/:id', validateTool, (req, res) => {
 toolsRouter.delete('/:id', (req, res) => {
   const index = tools.findIndex((tool) => tool.id === req.params.id);
 
-  if (index === ___) {
+  if (index === -1) {
     return res.status(404).json({ error: { message: 'Tool not found' } });
   }
 
   tools.splice(index, 1);
-  res.status(___).end();
+  res.status(204).end();
 });
